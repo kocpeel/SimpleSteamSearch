@@ -49,32 +49,3 @@ class MainActivity : ComponentActivity() {
         navController.navigate("wishlist")
     }
 }
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun BottomNavigationMenu(onNavigate: (Destination) -> Unit) {
-    val navBackStackEntry by navController.navBackStackEntry
-    val currentRoute = navBackStackEntry?.destination?.route
-
-    BottomNavigationBar(
-        icons = listOf(
-            Icons.Filled.Home,
-            Icons.Filled.Games,
-            Icons.Filled.ListAlt
-        ),
-        labels = listOf("Home", "Popular Games", "Wishlist"),
-        currentIcon = when (currentRoute) {
-            "popularGames" -> Icons.Filled.Games
-            "gameDetails" -> Icons.Filled.Games
-            "wishlist" -> Icons.Filled.ListAlt
-            else -> Icons.Filled.Home
-        },
-        onClick = { index ->
-            when (index) {
-                0 -> onNavigate(PopularGamesScreen)
-                1 -> onNavigate(GameDetailsScreen)
-                2 -> onNavigate(WishlistScreen)
-            }
-        }
-    )
-}
