@@ -75,7 +75,7 @@ fun GameDetailsListItem(game: SteamGame, onItemClicked: () -> Unit) {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = Alignment.CenterVertally
         ) {
             Image(
                 painter = rememberPainter(game.logoUrl),
