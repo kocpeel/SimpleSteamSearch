@@ -1,12 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Steam Search</string>
-    <string name="title_popular_games">Popular Games</string>
-    <string name="title_game_details">Game Details</string>
-    <string name="title_wishlist">Wishlist</string>
-    <string name="back_button_text">Back</string>
-    <string name="add_to_wishlist">Add to Wishlist</string>
-    <string name="remove_from_wishlist">Remove from Wishlist</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="app_name">SimpleSteamSearch</string>
 </resources>
