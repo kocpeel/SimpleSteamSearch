@@ -1,36 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/popularGamesScreen">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <fragment
-        android:id="@+id/popularGamesScreen"
-        android:name="com.example.simplesteamsearch.ui.screens.PopularGamesScreen"
-        android:label="PopularGamesScreen">
-        <action
-            android:id="@+id/action_popularGamesScreen_to_gameDetailsScreen"
-            app:destination="@id/gameDetailsScreen" />
-        <action
-            android:id="@+id/action_popularGamesScreen_to_wishlistScreen"
-            app:destination="@id/wishlistScreen" />
-    </fragment>
+    <uses-permission android:name="android.permission.INTERNET" />
 
-    <fragment
-        android:id="@+id/gameDetailsScreen"
-        android:name="com.example.simplesteamsearch.ui.screens.GameDetailsScreen"
-        android:label="GameDetailsScreen">
-        <argument
-            android:name="appid"
-            app:argType="string" />
-    </fragment>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SimpleSteamSearch">
+        
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
-    <fragment
-        android:id="@+id/wishlistScreen"
-        android:name="com.example.simplesteamsearch.ui.screens.WishlistScreen"
-        android:label="WishlistScreen">
-        <action
-            android:id="@+id/action_wishlistScreen_to_gameDetailsScreen"
-            app:destination="@id/gameDetailsScreen" />
-    </fragment>
-</navigation>
+</manifest>
