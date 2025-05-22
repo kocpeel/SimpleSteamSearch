@@ -19,10 +19,10 @@ interface SteamApiService {
         @Query("appids") appids: String,
         @Query("cc") cc: String = "pl",
         @Query("l") l: String = "polish"
-    ): Response<Map<String, Map<String, Any>>>
+    ): Response<Map<String, Any>>
 
     @GET("ISteamUserStats/GetNumberOfCurrentPlayers/v1/")
     suspend fun getCurrentPlayers(
         @Query("appid") appid: String
-    ): Response<Map<String, Map<String, Int>>>
+    ): Response<Map<String, Any>>
 }
