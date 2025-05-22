@@ -58,7 +58,11 @@ fun WishlistScreen(
         ) {
             LazyColumn {
                 items(wishlist) { game ->
-                    GameCard(game = game, onGameClick = onGameClick, onWishlistClick = onWishlistClick)
+                    GameCard(
+                        game = game,
+                        onGameClick = onGameClick,
+                        onWishlistClick = onWishlistClick
+                    )
                 }
             }
         }

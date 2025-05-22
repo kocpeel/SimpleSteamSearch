@@ -63,7 +63,11 @@ fun PopularGamesScreen(
         ) {
             LazyColumn {
                 items(popularGames) { game ->
-                    GameCard(game = game, onGameClick = onGameClick, onWishlistClick = onWishlistClick)
+                    GameCard(
+                        game = game,
+                        onGameClick = onGameClick,
+                        onWishlistClick = onWishlistClick
+                    )
                 }
             }
         }

@@ -64,11 +64,30 @@ fun GameDetailsScreen(
                 .padding(16.dp)
         ) {
             gameDetails?.let { details ->
-                Text(text = "Description: ${details.description}", style = MaterialTheme.typography.bodyMedium)
-                Text(text = "Players: ${details.players}", style = MaterialTheme.typography.bodyMedium)
-                Text(text = "Requirements: ${details.requirements}", style = MaterialTheme.typography.bodyMedium)
+                Text(
+                    text = "Description: ${details.description}",
+                    style = MaterialTheme.typography.bodyMedium
+                )
+                Text(
+                    text = "Players: ${details.players}",
+                    style = MaterialTheme.typography.bodyMedium
+                )
+                Text(
+                    text = "Requirements: ${details.requirements}",
+                    style = MaterialTheme.typography.bodyMedium
+                )
                 Spacer(modifier = Modifier.width(8.dp))
-                WishlistButton(game = Game(appid = appid), onWishlistClick = onWishlistClick)
+                WishlistButton(
+                    game = Game(
+                        name = "Game",
+                        appid = appid,
+                        price = "",
+                        publisher = "",
+                        players = 0,
+                        description = ""
+                    ),
+                    onWishlistClick = onWishlistClick
+                )
             }
         }
     }
