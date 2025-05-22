@@ -1,14 +1,20 @@
 package com.example.simplesteamsearch.viewmodel
 
+import android.content.Context
+import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.stringPreferencesKey
+import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.preference.contains
 import com.example.simplesteamsearch.data.model.Game
 import com.example.simplesteamsearch.data.model.GameDetails
 import com.example.simplesteamsearch.data.repository.SteamRepository
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+
+private val Context.dataStore by preferencesDataStore(name = "wishlist")
 
 class SteamViewModel : ViewModel() {
     private val repository = SteamRepository()
